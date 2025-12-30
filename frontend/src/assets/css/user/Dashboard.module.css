@@ -1,0 +1,211 @@
+.welcome_user {
+    padding: 40px 0px;
+}
+
+.welcome_user p:first-child {
+    font-size: 26px;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+.welcome_user p:last-child {
+    color: grey;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.refer_user {
+    box-shadow: var(--shadow);
+    padding: 40px 20px;
+    border-radius: 7px;
+}
+
+.refer_user p:first-child {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+.refer_user form input::placeholder {
+    color: grey;
+    font-size: small;
+}
+
+.refer_user form button {
+    background-color: #2C7DFF;
+    color: white;
+}
+
+.refer_user form button:hover {
+    opacity: 0.7;
+}
+
+
+/* for account review carousel */
+.carousel_container {
+    box-shadow: var(--shadow);
+}
+
+.summary_title {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: gray;
+}
+
+.carousel_container {
+    padding: 20px 20px;
+    border-radius: 7px;
+}
+
+.carousel_title {
+    font-family: sans-serif;
+    color: grey;
+}
+
+.carousel_balance p {
+    font-size: 23px;
+    font-family: sans-serif;
+}
+
+.carousel_balance p span {
+    color: grey;
+}
+
+/* .carousel_balance p span */
+
+.carousel_footer_title p:first-child {
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: grey;
+}
+
+.carousel_footer_title p:last-child {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.carousel_footer_title p:last-child span {
+    font-weight: lighter;
+}
+
+
+/* bitcoin row */
+.bitcoin_container {
+    box-shadow: var(--shadow);
+    padding: 40px 20px;
+    border-radius: 7px;
+}
+
+.bitcoin_img img {
+    width: 100%;
+}
+
+.bitcoin_text p:first-child {
+    font-family: sans-serif;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.bitcoin_text p:nth-child(2) {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: grey;
+}
+
+.bitcoin_text a {
+    text-decoration: none;
+}
+
+.bitcoin_text a button {
+    border: unset !important;
+    color: #2C7DFF;
+    text-decoration: underline;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* recent transaction */
+.transaction_main_container {
+    box-shadow: var(--shadow);
+}
+
+.transaction_history_container {
+    padding: 12px 20px 0px 20px;
+    /* box-shadow: var(--shadow); */
+    border: 1px solid #F5F6FA;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction_text {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.transaction_arrow {
+    color: #2C7DFF;
+}
+
+.transaction_icon {
+    background-color: #E2FBF4; 
+    color: #1EE0AC;
+    height: 40px;
+    width: 40px;
+    padding-top: 7px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.transaction_icon_red {
+    background-color: #FFDCDC; 
+    color: lightcoral;
+    height: 40px;
+    width: 40px;
+    padding-top: 7px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.transaction_title p:first-child {
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+}
+
+.transaction_title p:last-child {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: gray;
+}
+
+
+.transaction_title p:last-child span {
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    background-color: grey;
+    border-radius: 50%;
+    vertical-align: middle;
+} 
+
+.transaction_amount {
+    padding-top: 10px;
+}
+
+.transaction_amount p:first-child {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}

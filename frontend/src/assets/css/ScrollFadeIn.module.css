@@ -1,0 +1,23 @@
+/* styling the fade in */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh); /* Starts 20% of viewport height below its final position */
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform; /* Performance optimization */
+}
+
+/* Styles applied when the 'is-visible' class is added */
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none; /* Moves it back to its original position */
+    visibility: visible;
+}
+
+.spacer {
+    height: 100vh;
+}
+
+.intro-texts {
+    padding-top: 30vh;
+}

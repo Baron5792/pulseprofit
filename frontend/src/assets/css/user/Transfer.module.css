@@ -1,0 +1,65 @@
+.withdraw_container {
+    width: 40%;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .withdraw_container {
+        width: 90%;
+    }
+}
+
+.icon_track {
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.icon_track span {
+    padding: 0px;
+    font-size: 25px;
+}
+
+.icon_track .isActive {
+    color: #557DFF;
+}
+
+.icon_track .inActive {
+    color: #C4C4C4;
+}
+
+.user_image {
+    width: 70px;
+    margin: auto;
+}
+
+.user_image img {
+    width: 100%;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.users_info p:first-child {
+    font-family: sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+.users_info p:nth-child(2) {
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 13px;
+}
+
+.cancel_btn {
+    text-align: center;
+    display: block;
+    font-family: sans-serif;
+    color: lightcoral;
+    /* background-color: lightpink; */
+    /* padding: 1px; */
+    /* width: 60px; */
+    /* margin: auto; */
+    font-size: 13px;
+    cursor: pointer;
+}

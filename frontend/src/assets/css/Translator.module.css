@@ -1,0 +1,120 @@
+/* Container for the entire widget */
+.translateWrapper {
+    position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+/* --- Custom Dropdown Styles --- */
+
+.customDropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1000; /* Ensure it appears above page content */
+}
+
+.dropdownButton {
+    background-color: white;
+    color: #333;
+    padding: 4px 7px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    transition: background-color 0.2s;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.dropdownButton:hover {
+    background-color: #f7f7f7;
+}
+
+.dropdownButton:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.arrowIcon {
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.dropdownList {
+    position: absolute;
+    top: 100%; /* Position right below the button */
+    left: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 0px 0px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.dropdownList li {
+    padding: 4px 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.15s;
+}
+
+.dropdownList li:hover {
+    background-color: #e9e9e9;
+}
+
+.dropdownList .selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* --- Flag Icon Styles --- */
+
+.flagIcon {
+    margin-right: 10px;
+    width: 20px; /* Standard size for the flag span */
+    height: 15px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    flex-shrink: 0; /* Prevent flag from shrinking */
+    border: 1px solid #ccc; /* Add a subtle border */
+}
+
+/* --- Hidden Google Widget --- */
+
+.hiddenGoogleWidget {
+    /* CRUCIAL: Hide the original widget but keep it in the DOM */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    visibility: hidden; /* Ensure nothing is visible */
+    pointer-events: none; /* Ensure it can't be clicked */
+    z-index: -1;
+}
+
+/* --- Utility/Error Styles --- */
+.loadingText {
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.errorText {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 8px;
+}

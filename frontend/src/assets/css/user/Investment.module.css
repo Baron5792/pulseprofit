@@ -1,0 +1,119 @@
+.invest_intro_cotainer {
+    padding: 40px 0px 0px 0px;
+}
+
+.investment_text {
+    font-size: 16px;
+    font-weight: 550;
+    color: #96A7BD;
+    font-family: sans-serif;
+}
+
+.other_texts p:first-child {
+    font-size: 37px;
+    margin: 0;
+    font-family: sans-serif;
+    color: #364A63;
+}
+
+.other_texts p:nth-child(2) {
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #838FA8;
+}
+
+.other_buttons {
+    display: flex;
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    .other_buttons {
+        float: unset;
+    }
+}
+
+.other_buttons button {
+    padding: 6px 17px;
+}
+
+.other_buttons a:first-child button {
+    background-color: #03A4FF;
+    color: white;
+    border: 1px solid #03A4FF;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-right: 10px;
+}
+
+.other_buttons a:first-child:hover button {
+    opacity: 0.8;
+}
+
+.other_buttons a:nth-child(2) button {
+    background-color: white;
+    color: black;
+    border: 1px solid #96A7BD;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.other_buttons a:nth-child(2):hover button {
+    background-color: #CCD3E5;
+    border: 1px solid #CCD3E5;
+}
+
+.invested_account {
+    box-shadow: var(--shadow);
+    border-radius: 3px;
+    border-left: 4px solid #03A4FF;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.seperator {
+    border-bottom: 1px solid #CCD3E5;
+    padding: 20px 20px;
+}
+
+.invest_title {
+    font-size: 18px;
+    color: #5264A4;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+.amount_display p:first-child {
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #364A63;
+}
+
+.amount_display p:first-child span {
+    font-weight: 500;
+    font-size: 18px !important;
+    color: #5264A4;
+}
+
+.amount_display p:last-child {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #96A7BD  ;
+}
+
+.investment_footer {
+    padding: 20px;
+}
+
+.investment_footer button {
+    background-color: unset;
+    color: #03A4FF;
+    padding: 6px 17px;
+    border-radius: 3px;
+    border: unset;
+    font-family: sans-serif;
+    font-size: 14px;
+}

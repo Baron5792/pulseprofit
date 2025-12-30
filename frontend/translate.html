@@ -1,0 +1,232 @@
+import React, { useEffect, useState, useRef } from 'react';
+import styles from '../../assets/css/Translator.module.css';
+
+const GoogleTranslateCustom = () => {
+  const [isGoogleReady, setIsGoogleReady] = useState(false);
+  const [error, setError] = useState(null);
+  const [forceRender, setForceRender] = useState({});
+  const scriptLoadedRef = useRef(false);
+  const pollIntervalRef = useRef(null);
+  const isChangingLanguageRef = useRef(false);
+  const retryCountRef = useRef(0);
+
+  const languages = [
+      { code: '', name: 'Select a language', flag: '' },
+      // Use the two-letter country code for the flag
+      { code: 'en', name: 'English', flag: 'us' }, // United States (or 'gb' for UK)
+      { code: 'es', name: 'Spanish', flag: 'es' }, // Spain
+      { code: 'fr', name: 'French', flag: 'fr' }, // France
+      { code: 'de', name: 'German', flag: 'de' }, // Germany
+      { code: 'zh-CN', name: 'Chinese (Simplified)', flag: 'cn' }, // China
+      { code: 'ja', name: 'Japanese', flag: 'jp' }, // Japan
+      { code: 'ar', name: 'Arabic', flag: 'sa' }, // Saudi Arabia (or a general region)
+      { code: 'ru', name: 'Russian', flag: 'ru' }, // Russia
+      { code: 'pt', name: 'Portuguese', flag: 'pt' }, // Portugal
+      { code: 'hi', name: 'Hindi', flag: 'in' }, // India
+  ];
+
+  const handleLanguageChange = (event) => {
+    const langCode = event.target.value;
+    setError(null);
+
+    if (!langCode) {
+      // console.log('Placeholder selected, no translation needed');
+      return;
+    }
+
+    if (!isGoogleReady) {
+      setError('Translator not ready. Please wait or refresh.');
+      console.warn('Google Translate not ready yet');
+      return;
+    }
+
+    if (isChangingLanguageRef.current) {
+      // console.log('Language change already in progress, skipping');
+      return;
+    }
+    isChangingLanguageRef.current = true;
+    retryCountRef.current = 0;
+
+    const selectors = [
+      'select.goog-te-combo',
+      'select[id*="language"]',
+      'select[name="lang"]',
+      'select[class*="translate"]',
+      'select',
+    ];
+
+    const maxAttempts = 20;
+    const pollInterval = 500;
+    const maxRetries = 3;
+
+    const tryChangeLanguage = () => {
+      let googleDropdown = null;
+
+      for (const selector of selectors) {
+        googleDropdown = document.querySelector(selector);
+        if (googleDropdown) break;
+      }
+
+      if (!googleDropdown) {
+        const iframe = document.querySelector('.goog-te-banner-frame, iframe[id*="google"]');
+        if (iframe && iframe.contentDocument) {
+          for (const selector of selectors) {
+            googleDropdown = iframe.contentDocument.querySelector(selector);
+            if (googleDropdown) break;
+          }
+        }
+      }
+
+      if (googleDropdown) {
+        // console.log('Dropdown value before change:', googleDropdown.value);
+        googleDropdown.value = langCode;
+        googleDropdown.dispatchEvent(new Event('change', { bubbles: true }));
+        // console.log('Language changed to:', langCode, 'using selector:', googleDropdown.tagName, 'in', googleDropdown.ownerDocument === document ? 'main document' : 'iframe');
+        setForceRender({}); // Force re-render
+        clearInterval(pollIntervalRef.current);
+        pollIntervalRef.current = null;
+
+        // Verify translation after 2 seconds
+        setTimeout(() => {
+          const translated = document.documentElement.lang !== 'en' || document.querySelector('[data-language]');
+          if (!translated && langCode !== 'en' && retryCountRef.current < maxRetries) {
+            retryCountRef.current += 1;
+            console.log(`No translation detected, retrying (${retryCountRef.current}/${maxRetries})...`);
+            tryChangeLanguage();
+          } else {
+            isChangingLanguageRef.current = false;
+            if (!translated && langCode !== 'en') {
+              setError('Translation failed after retries.');
+              console.error('Translation failed for language:', langCode);
+            }
+          }
+        }, 2000);
+      } else if (attempts >= maxAttempts) {
+        setError('Failed to change language. Google Translate dropdown not found.');
+        console.error('Google Translate dropdown not found after', maxAttempts, 'attempts. Tried selectors:', selectors);
+        clearInterval(pollIntervalRef.current);
+        pollIntervalRef.current = null;
+        isChangingLanguageRef.current = false;
+      } else {
+        attempts++;
+        // console.log('Attempt', attempts, 'to find Google dropdown');
+      }
+    };
+
+    let attempts = 0;
+    if (pollIntervalRef.current) {
+      console.log('Clearing existing interval');
+      clearInterval(pollIntervalRef.current);
+    }
+
+    console.log('Starting new polling interval for language:', langCode);
+    pollIntervalRef.current = setInterval(tryChangeLanguage, pollInterval);
+    tryChangeLanguage();
+
+    setTimeout(() => {
+      if (isChangingLanguageRef.current) {
+        // console.log('Resetting isChangingLanguageRef due to timeout');
+        isChangingLanguageRef.current = false;
+      }
+    }, 10000);
+  };
+
+  const elementRef = useRef(null);
+  useEffect(() => {
+    if (scriptLoadedRef.current) return;
+    scriptLoadedRef.current = true;
+
+    if (window.google && window.google.translate) {
+      // console.log('Google Translate already loaded');
+      setIsGoogleReady(true);
+      return;
+    }
+
+    window.googleTranslateElementInit = () => {
+      try {
+        // console.log('Initializing Google Translate');
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            autoDisplay: false,
+            includedLanguages: languages.filter(lang => lang.code).map(lang => lang.code).join(','),
+            gaTrack: false,
+          },
+          // 'google_translate_element'
+          elementRef.current
+        );
+        setIsGoogleReady(true);
+        // console.log('Google Translate initialized successfully');
+      } catch (err) {
+        console.error('Google Translate initialization failed:', err);
+        setError('Failed to initialize translator.');
+      }
+    };
+
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+
+    script.onerror = () => {
+      console.error('Failed to load Google Translate script');
+      setError('Failed to load translator. Check your network or try again later.');
+      setIsGoogleReady(false);
+    };
+
+    script.onload = () => {
+      // console.log('Google Translate script loaded successfully');
+    };
+
+    document.head.appendChild(script);
+
+    const timeout = setTimeout(() => {
+      if (!window.google || !window.google.translate) {
+        setError('Translator took too long to load.');
+        setIsGoogleReady(false);
+        console.error('Google Translate script timeout after 10 seconds');
+      }
+    }, 10000);
+
+    return () => {
+      // console.log('Cleaning up Google Translate');
+      clearTimeout(timeout);
+      if (pollIntervalRef.current) {
+        clearInterval(pollIntervalRef.current);
+        pollIntervalRef.current = null;
+      }
+      const googleWidget = document.querySelector('.goog-te-banner-frame');
+      if (googleWidget) googleWidget.remove();
+      const googleStyles = document.querySelectorAll('style[id*="google-translate"], style[data-google-translate]');
+      googleStyles.forEach((style) => style.remove());
+      const googleScripts = document.querySelectorAll('script[src*="translate.google.com"]');
+      googleScripts.forEach((script) => script.remove());
+      isChangingLanguageRef.current = false;
+    };
+  }, []);
+
+  return (
+    <div className={styles.translateWrapper} ref={elementRef}>
+      {/* <select
+        className={styles.customLanguageSelect}
+        onChange={handleLanguageChange}
+        defaultValue=""
+        disabled={!isGoogleReady || !!error}
+      >
+        {languages.map((lang) => (
+          <option key={lang.code || 'placeholder'} value={lang.code}>
+            {lang.name} 
+          </option>
+        ))}
+      </select> */}
+
+      <div id="google_translate_element"/>
+
+      {error && <div className={styles.errorText}>{error}</div>}
+      {!isGoogleReady && !error && (
+        <div className={styles.loadingText}>Loading translator...</div>
+      )}
+    </div>
+  );
+};
+
+export default GoogleTranslateCustom;

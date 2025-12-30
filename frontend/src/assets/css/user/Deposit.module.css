@@ -1,0 +1,315 @@
+.deposit_header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.deposit_header span {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.deposit_header .active span {
+    color: #2196F3;
+}
+
+.deposit_header .inactive {
+    color: #C6CFDB;
+}
+
+.deposit_container {
+    width: 40%;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .deposit_container {
+        width: 90%;
+    }
+}
+
+.page_title {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #364A63;
+    text-align: center;
+}
+
+.more_title {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.more_title p:first-child {
+    font-size: 16px;
+    color: #5F6E8A;
+    font-weight: 500 !important;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.more_title p:first-child span {
+    font-weight: 600;
+    font-size: 19   px;
+}
+
+.more_title p:nth-child(2) {
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #96A6BC;
+    margin-bottom: 0px;
+}
+
+.more_title p:nth-child(3) {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #364A63;
+}
+
+.form-group {
+    margin: 40px 0px;
+    padding: 15px 0px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.container input {
+  position: absolute; /* Take it out of flow */
+  opacity: 0; /* Make it invisible */
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #5A6B7F;
+    font-weight: 600;
+}
+
+.checkmark {
+    /* Set your desired size here */
+    height: 25px; /* Increase this value for a larger button */
+    width: 25px; /* Increase this value for a larger button */
+    
+    /* Basic styling to look like a radio button */
+    background-color: #eee;
+    border-radius: 50%; /* Makes it circular */
+    border: 2px solid #ccc;
+    display: inline-block; /* Essential for applying width/height */
+    margin-right: 8px; /* Space between the button and the label text */
+    position: relative; /* If you want to center a dot inside later */
+    vertical-align: middle; /* Aligns it nicely with the text */
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3; /* Change background color when checked */
+  border-color: #2196F3; /* Optional: change border color */
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  /* Center the dot */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Style the dot */
+  width: 10px; /* Size of the inner dot */
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  display: none; /* Hide the dot by default */
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.form-button {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 200px;
+}
+
+.form-button button {
+    background-color: #2196F3;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+.form-button button::after {
+    background-color: #2196F3;
+}
+
+.form-button button::before {
+    background-color: #2196F3;
+}
+
+.form-button button:focus {
+    background-color: #2196F3;
+    color: white;
+}
+
+.form-data label {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #5A6B7F;
+}
+
+.form-data select, .form-data select option, .form-data input {
+    color: grey;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.label_text {
+    font-size: 13px;
+    color: #5A6B7F;
+}
+
+.form-button {
+    text-align: center;
+}
+
+.form-button a {
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 14px;
+    color: lightcoral;
+}
+
+.confirm_deposit_container {
+    margin: 50px 0px;
+}
+
+.detail-card {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 10px 0px 10px;
+    background-color: #F5F6FA;
+    border-radius: 3px;
+}
+
+.detail-card p:first-child {
+    font-size: 14px; 
+    color: #61718F;
+    font-family: sans-serif;
+}
+
+.detail-card p:nth-child(2) {
+    color: #4F6177;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.deposit_wallet_title {
+    padding: 30px 0px;
+}
+
+.deposit_wallet_title p:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-align: center;
+    color: #364A63;
+}
+
+.deposit_wallet_title input {
+    color: #4F6177;
+}
+
+.deposit_wallet_title input:focus {
+    color: #4F6177;
+}
+
+.deposit_wallet_title div button:focus {
+    border: none !important;
+}
+
+.deposit_wallet_title span {
+    font-size: 13px;
+    font-weight: lighter;
+    color: #364A63;
+}
+
+.proceed_text_button {
+    text-align: center;
+}
+
+.proceed_text_button button:first-child {
+    font-weight: 600;
+    background-color: #2196F3;
+    color: white;
+}
+
+.proceed_text_button button:first-child:focus {
+    background-color: #2196F3;
+    color: white;
+}
+
+.proceed_text_button button:nth-child(2) {
+    background-color: unset;
+    border: unset;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: lightcoral;
+    padding: 5px 10px;
+    transition: 1s ease-in;
+}
+
+.proceed_text_button button:nth-child(2):hover {
+    background-color: lightpink;
+}
+
+.deposit_upload form .top_row input {
+    display: none;
+}
+
+.deposit_upload form .top_row label {
+    text-align: center;
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    color: #96A6BC;
+    border: 3px dashed lightblue;
+}
+
+.accept-terms input {
+    color: #2196F3;
+}
+
+.accept-terms label {
+    font-size: 14px;
+}
+
+.deposit_upload form button:first-child {
+    background-color: #2196F3;
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: 30px;
+}
+
+.deposit_upload form button:first-child:focus {
+    background-color: #2196F3;
+    color: white;
+}

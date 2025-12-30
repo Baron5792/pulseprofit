@@ -1,0 +1,243 @@
+.main-container {
+    background-color: var(--primary-color);
+    padding-bottom: 100px;
+}
+
+.main_home_header {
+    padding-bottom: 230px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding-bottom: 100px;
+    }
+}
+
+.intro-texts {
+    padding-top: 130px;
+}
+
+.intro-texts p:first-child {
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.intro-texts p:last-child  {
+    font-family: sans-serif;
+}
+
+.intro-img img {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .intro-img {
+        margin-top: 170px;
+        padding: 70px 0px;
+    }
+
+    .intro-img img {
+        height: 100%;
+    }
+}
+
+.intro-others {
+    padding: 20px 0px 0px 10px;
+}
+
+.innovative_container {
+    padding: 150px 0px 70px 0px;
+}
+
+.innovative-img img {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .innovative-img {
+        padding-top: 50px;
+    }
+}
+
+.innovative_texts {
+    font-family: sans-serif;
+}
+
+.innovative_texts p:first-child {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.more_info {
+    padding: 50px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s ease-in;
+    height: 400px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .more_info {
+        padding: 30px;
+    }
+}
+
+.more_info:hover {
+    transform: translateY(-10px);
+}
+
+.more_info_icon p {
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: #A1EEBD;
+    width: 45px;
+    text-align: center;
+    height: 45px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.more_info_texts {
+    font-family: sans-serif;
+}
+
+.more_info_texts p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.more_info_texts p:last-child {
+    font-size: 17px;
+    color: grey;
+}
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .more_info_texts p:last-child {
+        font-size: 14px;
+        color: grey;
+    }
+}
+
+.more_info a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.more_info a:hover {
+    opacity: 0.5;
+}
+
+.who_we_are_title {
+    padding-top: 100px;
+}
+
+.who_we_are_title p {
+    font-size: var(--title);
+    font-weight: bold;
+}
+
+.tiny-line {
+    width: 80px; 
+    height: 4px; 
+    background-color: darkcyan;
+    margin: 10px 0px; 
+}
+
+.who_we_are_sub_text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.who_we_are_sub_text p:first-child {
+    width: 500px;
+    font-family: sans-serif;
+}
+
+.who_we_are_sub_text a {
+    text-decoration: none;
+    display: block;
+}
+
+.who_we_are_sub_text a button {
+    padding: 13px 23px;
+    border: none;
+    background-color: #A1EEBD;
+    font-weight: 500;
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+.who_we_are_content {
+    margin-top: 50px;
+}
+
+.who_we_are_content p:first-child {
+    font-size: var(--sub_title);
+    font-weight: 400;
+}
+
+.who_we_are_content p:last-child {
+    color: grey;
+    font-size: var(--sub_title_content);
+}
+
+.CustomerReport {
+    padding: 100px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .customerReportImg {
+        margin-bottom: 40px;
+    }
+}
+
+.customerReportImg img {
+    width: 100%;
+    height: 350px;
+}
+
+.customerTrackRecord {
+    box-shadow: var(--shadow);
+    text-align: center;
+    padding: 60px 0px 0px 0px;
+    transition: 1s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+    .customerTrackRecord {
+        margin-bottom: 40px;
+    }
+}
+
+.customerTrackRecord:hover {
+    background-color: #A1EEBD;
+}
+
+.customerTrackRecord:hover p:first-child, .customerTrackRecord:hover p:nth-child(2), .customerTrackRecord:hover p:nth-child(3) {
+    color: white;
+}
+
+.customerTrackRecordSpace {
+    width: 70%;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.customerTrackRecordSpace p:first-child {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.customerTrackRecordSpace p:nth-child(2) {
+    font-size: 45px;
+    font-weight: bold;
+    color: #A1EEBD;
+}
+
+.customerTrackRecordSpace p:nth-child(3) {
+    font-size: 14px;
+    color: grey;
+}
+

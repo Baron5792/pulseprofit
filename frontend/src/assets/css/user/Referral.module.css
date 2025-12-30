@@ -1,0 +1,83 @@
+.referral_header p:first-child {
+    font-size: 22px;
+    font-family: sans-serif;
+    padding: 40px 0px 0px 0px;
+    color: #6C757D;
+}
+
+.referral_header p:last-child {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.referral_title {
+    margin: 30px 0px;
+}
+
+.referral_title p:first-child {
+    font-size: 22px;
+    color: #6C757D;
+}
+
+.referral_title ol li {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.referral_link {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #6C757D;
+    margin-bottom: 60px;
+}
+
+.table_container {
+    width: 60%;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    padding: 0px 0px 30px 0px;
+    margin-bottom: 200px;
+    /* margin-top: 80px; */
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .table_container {
+        width: 100%;
+    }
+}
+
+.table_container table {
+    width: 100% !important;
+    text-align: center;
+}
+
+.table_container table thead tr th {
+    padding: 20px 20px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.table_container table tbody td {
+    font-family: sans-serif;
+    font-size: 13px;
+    text-transform: capitalize;
+    border-bottom: 1px solid silver;
+}
+
+@media screen and (max-width: 768px) {
+    .table_container table thead tr th:nth-child(4) {
+        display: none;
+    }
+
+    .table_container table tbody tr td:nth-child(4) {
+        display: none;
+    }
+}
+
+.table_container table tbody td img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

@@ -1,0 +1,49 @@
+.main_container {
+    background-color: #F6F6F6;
+    padding: 150px 0px;
+}
+
+.tiny-line {
+    width: 80px; 
+    height: 4px; 
+    background-color: darkcyan;
+    margin: 10px 0px; 
+}
+
+.tiny_line_text {
+    color: darkcyan;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.Inflation_hero_text {
+    font-family: sans-serif;
+}
+
+.inflationText {
+    padding-top: 50px;
+}
+
+.Inflation_hero_text p:first-child {
+    font-size: var(--title);
+    font-weight: bold;
+}
+
+.Inflation_hero_text p:last-child {
+    color: grey;
+}
+
+.inflationImg {
+    width: 75%;
+    margin: auto;
+}
+
+.inflationImg img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .inflationImg {
+        width: 100%;
+    }
+}

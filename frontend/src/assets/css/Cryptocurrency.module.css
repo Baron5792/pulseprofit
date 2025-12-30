@@ -1,0 +1,14 @@
+.hero_img img {
+    width: 100%;
+    height: 550px;
+}
+
+.body_container {
+    padding: 100px 0px;
+    background-color: #EEF7FF;
+}
+
+.body_container {
+    font-family: sans-serif;
+    color: #93979A;
+}

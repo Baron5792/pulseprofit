@@ -1,0 +1,239 @@
+.page_title {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 30px 0px;
+}
+
+.overview {
+    box-shadow: var(--shadow);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .overview {
+        margin-bottom: 20px;
+    }
+}
+
+.overview_description {
+    margin-left: 10px;
+}
+
+.overview_icon {
+    font-size: 30px;
+    color: lightblue;
+}
+
+.overview_description p:first-child {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+    
+.overview_description p:nth-child(2) {
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
+
+.overview_description small {
+    font-size: 12px;
+    color: grey;
+}
+
+.inroduce_user {
+    padding: 60px 0px;
+}
+
+.inroduce_user p:first-child {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: grey;
+}
+
+.inroduce_user p:last-child {
+    font-size: 27px;
+    font-family: sans-serif;
+}
+
+.search_engine {
+    padding: 50px 0px;
+    width: 300px;
+}
+
+.search_engine input::placeholder {
+    font-size: 14px;
+}
+
+.table_container {
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    padding: 0px 0px 30px 0px;
+    margin-bottom: 200px;
+}
+
+.deposit_table {
+    width: 100%;
+    text-align: center;
+}
+
+.deposit_table thead tr th {
+    padding: 20px 20px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .deposit_table thead tr th:nth-child(4), .deposit_table tbody tr td:nth-child(4), .deposit_table tbody tr td:nth-child(5), .deposit_table thead tr th:nth-child(5), .deposit_table tbody tr td:nth-child(1), .deposit_table thead tr th:nth-child(1) {
+        display: none;
+    }
+}
+
+.deposit_table tbody tr td {
+    font-family: sans-serif;
+    font-size: 13px;
+    text-transform: capitalize;
+    border-bottom: 1px solid silver;
+}
+
+@media screen and (max-width: 768px) {
+    .deposit_table tbody tr td {
+        font-size: 12px;
+    }
+}
+
+/* for modals */
+.modal_title {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.modal_title p:first-child {
+    font-family: sans-serif;
+    font-size: 22px;
+    margin-top: 13px;
+}
+
+.modal_title button {
+    font-size: 23px;
+}
+
+.modal_body {
+    padding: 20px 0px;
+}
+
+.modal_body table {
+    width: 100%;
+    text-align: center;
+    padding: 0px 20px !important;
+}
+
+.modal_body table thead th {
+    font-size: 14px ;
+    border-bottom: 1px solid #969696;
+    padding: 10px 0px;
+    font-weight: lighter;
+}
+
+.modal_body tbody td {
+    padding: 10px 0px;
+    font-size: 13px;
+    color: grey;
+    font-weight: lighter;
+}
+
+.modal_details {
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.modal_details p:last-child {
+    color: #969696;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.proof img {
+    width: 100%;
+    height: 400px;
+}
+
+.modal_buttons {
+    padding: 30px 0px;
+}
+
+.accept_btn {
+    background-color: lightgreen !important;
+    color: white !important;
+    font-family: sans-serif !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.decline_btn {
+    background-color: lightcoral !important;
+    color: white !important;
+    font-family: sans-serif !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.dropdown_menu {
+    padding: 0px !important;
+    border: unset !important;
+    box-shadow: var(--shadow);
+    width: 200px !important;
+}
+
+.dropdown_menu p {
+    padding: 7px 20px !important;
+    font-family: sans-serif !important;
+    font-size: 13px !important;
+    margin: 0px !important;
+}
+
+.dropdown_menu p:hover {
+    background-color: silver;
+}
+
+.dropdown_menu p span {
+    color: lightcoral;
+}
+
+.form-data {
+    margin-bottom: 10px;
+}
+
+.form-data label {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: grey;
+}
+
+.form-data input {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.modal_main_container {
+    padding: 0px 20px;
+}
+
+.modal_img {
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.modal_img img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid silver;
+}

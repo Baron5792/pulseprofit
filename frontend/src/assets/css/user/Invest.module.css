@@ -1,0 +1,173 @@
+.dots {
+    text-align: center;
+    padding: 60px;
+}
+
+.dots .isActive {
+    color: #2C7DFF;
+}
+
+.dots .notActive {
+    color: #F0F0F0;
+}
+
+.main_container {
+    width: 45%;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .main_container {
+        width: 100%;
+    }
+}
+
+.investment_intro {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.investment_intro p:first-child {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #364A63;
+}
+
+.investment_intro p:last-child {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #576785;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.plan_container {
+    width: 100%;
+    box-shadow: var(--shadow);
+    padding: 10px 30px 0px 30px;
+    border-radius: 3px;
+}
+
+.plan_icon span {
+    font-size: 30px;
+    color: #364A63;
+}
+
+.plan_details p:first-child {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.plan_details p:nth-child(2) {
+    font-size: 13px;
+    color: #576785;
+}
+
+.inputed_amount {
+    padding-top: 50px;
+}
+
+.amount_input input {
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+.min_max {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #576785;
+}
+
+.submit_btn {
+    padding: 60px 0px 70px 0px;
+    text-align: center;
+}
+
+.submit_btn button {
+    background-color: #2C7DFF !important;
+    padding: 10px 0px !important;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+
+.submit_btn button:focus {
+    background-color: #2C7DFF !important;
+    color: white !important;
+    border: 1px solid #2C7DFF !important;
+}
+
+.submit_btn span {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #576785;
+    text-align: center;
+}
+
+.plan_con {
+    box-shadow: var(--shadow);
+    padding: 10px 30px 0px 30px;
+    border-radius: 3px;
+}
+
+.plan_title {
+    text-align: center;
+}
+
+.plan_title .plan_img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.plan_title p:first-child {
+    font-size: 13px;
+    font-weight: lighter;
+    margin-bottom: 0px;
+    color: #364A63;
+    font-family: sans-serif;
+}
+
+.plan_title p:last-child {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #576785;
+}
+
+.plan_display {
+    box-shadow: var(--shadow);
+    margin: 50px 0px;
+}
+
+.plan_info {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #F0F0F0;
+    padding: 15px 30px 0px 30px;
+    background-color: white;
+}
+
+.plan_info p:first-child {
+    font-size: 13px;
+    color: #364A63;
+    font-family: sans-serif;
+}
+
+.plan_info p:last-child {
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #576785;
+}
+
+.conclusion {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #576785;
+}

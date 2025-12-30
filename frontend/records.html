@@ -1,0 +1,72 @@
+VITE_APP_NAME=Pulse Profit
+VITE_APP_API_URL=http://localhost/pulseprofit/api/
+VITE_APP_API_MIDDLEWARE=http://localhost/pulseprofit/middleware/
+VITE_APP_EMAIL=support@cryptofxzen-jp.com
+VITE_APP_LOCATION=32 Daylesford Grove, Slough, England, SL1 5AX
+VITE_SUPPORT_EMAIL=support@pulseprofit.org
+VITE_APP_COMP_URL=http://localhost/pulseprofit/component/
+VITE_APP_DOMAIN=http://thepulseprofit.com/account/register?referralid
+VITE_APP_AVATAR=http://localhost/pulseprofit/images/
+
+
+
+
+
+
+
+VITE_APP_NAME=Pulse Profit
+VITE_APP_API_URL=https://thepulseprofit.org/pulseprofit/api/
+VITE_APP_API_MIDDLEWARE=https://thepulseprofit.org/pulseprofit/middleware/
+VITE_APP_EMAIL=support@thepulseprofit.org
+VITE_APP_LOCATION=32 Daylesford Grove, Slough, England, SL1 5AX
+VITE_SUPPORT_EMAIL=support@pulseprofit.org
+VITE_APP_COMP_URL=https://thepulseprofit.org/pulseprofit/component/
+VITE_APP_DOMAIN=https://thepulseprofit.org/account/register?referralid
+VITE_APP_AVATAR=https://thepulseprofit.org/pulseprofit/images/
+
+
+
+
+
+<?php   
+    session_start();
+    define('DB_HOST', '127.0.0.1');
+    define('DB_USER', 'u304999589_pulseprofit');
+    define('DB_PASSWORD', 'Bencollins2003');
+    define('DB_NAME', 'u304999589_pulseprofit');
+
+    try {
+        $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        if (!$connection) {
+            echo json_encode(mysqli_connect_error());
+            die();
+        }
+    }
+
+    catch(Exception $exception) {
+        http_response_code(500);
+        echo json_encode('Database error: ' . $exception->getMessage());
+    }
+
+
+
+
+<?php   
+    session_start();
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', '');
+    define('DB_NAME', 'pulse_profit');
+
+    try {
+        $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        if (!$connection) {
+            echo json_encode(mysqli_connect_error());
+            die();
+        }
+    }
+
+    catch(Exception $exception) {
+        http_response_code(500);
+        echo json_encode('Database error: ' . $exception->getMessage());
+    }

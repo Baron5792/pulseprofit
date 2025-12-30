@@ -1,0 +1,107 @@
+.contact_main_container {
+    padding: 100px 0px;
+    background-color: #EEF7FF;
+}
+
+.page_intro p:first-child {
+    font-size: var(--title);
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.tiny-line {
+    width: 80px; 
+    height: 4px; 
+    background-color: darkcyan;
+    margin: 10px 0px; 
+}
+
+.page_intro p:last-child {
+    font-size: var(--subtitle);
+    color: #555;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+.contact_info_form {
+    padding: 100px 0px;
+}
+
+.contact_info p, .opening_hours_info p {
+    font-size: var(--subtitle);
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact_info span, .opening_hours_info span {
+    display: block;
+    margin: 5px 0px;
+    font-size: 15px;
+}
+
+.send_message {
+    font-size: var(--title);
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .contact_form {
+        margin-top: 60px;
+    }
+}
+
+.form input, .form select, .form textarea {
+    padding: 13px 20px;
+    border-radius: 50px;
+    outline: none;
+    color: grey;
+    box-shadow: var(--shadow);
+}
+
+@media screen and (max-width: 767px) {
+    .form input {
+        margin-top: 20px;
+    }
+}
+
+.form input::placeholder, .form select::placeholder, .form textarea::placeholder {
+    color: grey;
+    font-size: 14px;
+}
+
+.form select {
+    font-size: 14px;
+}
+
+.form select option {
+    color: grey;
+    font-size: 14px;
+}
+
+.form select option:hover {
+    background-color: var(--primary);
+}
+
+.captcha_label {
+    font-size: 16px;
+    font-family: cursive;
+}
+
+.submit_button {
+    padding: 20px 30px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 40px;
+    background-color: darkcyan;
+    color: white;
+    font-weight: bold;
+    transition: 1s ease-in;
+    font-family: sans-serif;
+}
+
+.submit_button:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}

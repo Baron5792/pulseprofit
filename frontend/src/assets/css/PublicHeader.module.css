@@ -1,0 +1,455 @@
+.main_container {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.left_nav {
+    background-color: white;
+    border-right: 1px solid #F5F6FA;
+    padding: 0px 60px;
+}
+
+@media screen and (max-width: 990px) {
+    .left_nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1001;
+        transform: translateX(-100%);
+        /* box-shadow: var(--shadow); */
+        display: block !important;
+        padding: 0px 0px;
+    }
+
+    .mobile_nav_open {
+        transform: translateX(0) !important;
+    }
+}
+
+.left_logo_container {
+    position: relative;
+}
+
+.logo_img {
+    position: sticky;
+    flex-shrink: 0;
+    top: 0px;
+    background-color: white;
+    padding: 20px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo_img {
+        padding: 20px 20px;
+    }
+}
+
+.logo_img a img {
+    width: 55%;
+}
+
+.closeMenu span {
+    position: absolute;
+    top: 20px;
+    font-size: 30px;
+    right: 15px;
+    color: grey;
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    .closeMenu span {
+        display: block;
+    }
+}
+
+.mobileViewOnly {
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    .mobileViewOnly {
+        display: block;
+    }
+
+    .scroll_nav .scroll_nav {
+        height: 2500px;
+    }
+
+    .mobileViewOnly .scroll_nav .NameDisplay {
+        padding: 10px 20px !important;
+        background-color: white;
+        margin: 0px !important;
+        border-bottom: 1px solid #EEF0F7;
+        margin: 0px !important;
+    }
+
+    .mobileViewOnly .scroll_nav .balance_container {
+        display: block;
+        padding: 10px 30px;
+    }
+
+    .mobileViewOnly .scroll_nav .depositRow {
+        padding: 10px 30px;
+        margin-bottom: 50px;
+    }
+}
+
+.scroll_nav {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-bottom: 200px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.scroll_nav::-webkit-scrollbar-track {
+    background-color: white; 
+}
+
+.scroll_nav::-webkit-scrollbar {
+    width: 0px !important; /* Width of the entire scrollbar */
+    color: white;
+    background-color: white !important;
+}
+
+.balance_container {
+    padding: 40px 0px 10px 0px;
+}
+
+.balance_title {
+    font-size: 12px;
+    color: grey;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.balance_display {
+    font-weight: bold;
+    font-size: 23px;
+    color: #2C7DFF;
+    font-family: sans-serif;
+}
+
+.balance_display span {
+    font-size: small;
+}
+
+@media screen and (max-width: 768px) {
+    .scroll_nav .balance_container {
+        display: none;
+    }
+
+    .deposit_button, .withdraw_button {
+        display: none;
+    }
+}
+
+.profit_date p:first-child {
+    font-size: small;
+    color: grey;
+    margin: 0px;
+}
+
+.profit_date p:nth-child(2) {
+    font-size: small;
+    font-weight: 600;
+    margin: 3px 0px;
+}
+
+.profit_date p:nth-child(2) span {
+    font-size: 14px;
+    font-weight: lighter;
+    color: grey;
+}
+
+.deposit_button button:focus {
+    background-color: #1D8AFF;
+    color: white;
+}
+
+.deposit_button a {
+    text-decoration: none;
+}
+
+.deposit_button a button {
+    background-color: #2C7DFF;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 0px;
+    border: none;
+}
+
+.deposit_button a button:hover {
+    opacity: 0.7;
+}
+
+.withdraw_button button:focus {
+    background-color: #F4BD0E;
+    color: white;
+}
+
+.withdraw_button a {
+    text-decoration: none;
+}
+
+.withdraw_button a button {
+    background-color: #F4BD0E;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 0px;
+    border: none;
+}
+
+.withdraw_button a button:hover {
+    opacity: 0.7;
+}
+
+.menu {
+    font-weight: 500;
+    color: #A194AE;
+    margin-top: 50px;
+    font-size: 13px;
+    padding: 0px 20px;
+}
+
+.nav_links a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 25px;
+    color: grey;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin: 4px 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav_links a {
+    background-color: unset;
+}
+
+.nav_links a:hover {
+    background-color: #EEF0F7;
+    color: #1D8AFF;
+}
+
+.nav_links a span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav_links .isActive {
+    background-color: #EEF0F7;
+    color: #1D8AFF;
+}
+
+@media screen and (max-width: 768px) {
+    .nav_links .isActive {
+        background-color: unset;
+    }
+}
+
+
+
+
+/* for right nav */
+.right_nav {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+}
+
+.right_nav_header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 1px solid #F5F6FA;
+    padding: 15px 50px 15px 50px;
+    width: 100%;
+}
+
+@media screen and (max-width: 769px) {
+    .right_nav_header {
+        padding: 7px 20px;
+    }
+}
+
+.logoBar button, .logoBar img {
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    .logoBar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logoBar button {
+        display: block;
+        font-size: 30px;
+        margin-top: 7px;
+    }
+
+    .logoBar div {
+        padding-top: 10px;
+    }
+
+    .logoBar img {
+        display: block;
+        width: 200px;
+    }
+}
+
+.profileDisplay {
+    display: flex;
+}
+
+.profileIcon {
+    height: 35px;
+    width: 35px;
+    padding-top: 7px;
+    color: white;
+    font-size: small;
+    border-radius: 50%;
+    background-color: #2C7DFF;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 769px) {
+    .profileIcon {
+        margin-top: 30px !important;
+    }
+}
+
+.DropdownBtn {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: small !important;
+    font-weight: 500 !important;
+    color: grey !important;
+    display: flex !important;
+    border: unset !important;
+}
+
+@media screen and (max-width: 768px) {
+    .DropdownBtn {
+        padding-top: 19px !important;
+    }
+
+    .userName {
+        display: none;
+    }
+}
+
+
+.DropdownMenu {
+    top: 15px !important;
+    border-radius: unset !important;
+    border: unset !important;
+    border-top: 3px solid #1D8AFF !important;
+    box-shadow: var(--shadow) !important;
+    width: 300px !important;
+    padding: 0px !important;
+}
+
+.NameDisplay {
+    padding: 20px;
+    background-color: #F5F6FA;
+    display: flex;
+    color: grey;
+}
+
+@media screen and (max-width: 768px) {
+    .DropdownMenu .NameDisplay {
+        display: none;
+    }
+}
+
+.username {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+.depositRow {
+    background-color: white;
+    padding: 20px;
+    padding-left: 20px;
+    /* border-bottom: 1px solid #A194AE; */
+}
+
+.ProfileLinks a {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: #1D8AFF;
+}
+
+.ProfileLinks a i {
+    font-weight: 600;
+}
+
+.otherLink {
+    padding: 20px;
+    border-top: 1px solid #EEF0F7;
+}
+
+.otherLink a {
+    display: block;
+    padding: 7px 0px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: grey;
+    font-weight: 500;
+}
+
+.otherLink a:hover {
+    color: #2C7DFF;
+}
+
+.content_view {
+    overflow-y: auto;
+    height: 100vh;
+    overflow-x: auto;
+}
+
+.content_view::-webkit-scrollbar-track {
+    background-color: white; 
+}
+
+.content_view::-webkit-scrollbar {
+    width: 0px; /* Width of the entire scrollbar */
+    color: white;
+    background-color: white !important;
+}
+
+.content_view::-webkit-scrollbar-thumb {
+    /* Set the thumb color and border-radius to match the new narrow size */
+    background-color: #A0A0A0; /* Example color (the thumb needs color) */
+    border-radius: 0; /* Ensures it fits the 1px width */
+}
+
+@media screen and (max-width: 768px) {
+    .content_view {
+        
+    }
+}
+
+.page_content {
+    background-color: white;
+}
+

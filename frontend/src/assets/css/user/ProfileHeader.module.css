@@ -1,0 +1,93 @@
+.access_control {
+    padding: 40px 0px;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: grey;
+}
+
+.user_avatar {
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {  
+    .user_avatar {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        /* background-color: red; */
+    }
+}
+
+.user_avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.avatar_btn {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+
+.modal_title {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.modal_title p:first-child {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-top: 5px;
+}
+
+.modal_body {
+    padding: 0px 20px;
+}
+
+.modal_body input {
+    display: none;
+}
+
+.modal_body label {
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    border: 4px dashed var(--primary-color);
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: sans-serif;
+}
+
+.modal_footer {
+    padding: 30px 20px;
+}
+
+.nav_links {
+    width: 100%;
+    border-bottom: 1px solid silver;
+    /* padding-bottom: 10px; */
+    padding-top: 50px;
+    display: flex;
+}
+
+.nav_links a {
+    margin-right: 40px;
+}
+
+.nav_links .notActive {
+    font-weight: 500;
+    text-decoration: none;
+    color: #364A63;
+    font-size: 14px;
+    padding-bottom: 13px;
+}
+
+.nav_links .isActive {
+    text-decoration: none;
+    border-bottom: 3px solid #2C7DFF;
+    padding-bottom: 13px;
+    font-size: 14px;
+    font-weight: 500;
+}
